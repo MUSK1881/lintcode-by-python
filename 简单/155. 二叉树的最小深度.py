@@ -41,14 +41,5 @@ class Solution:
             return self.minDepth(root.right)+1
         if not root.right:
             return self.minDepth(root.left)+1
-            
-        leftDepth=self.minDepth(root.left)+1
-        rightDepth=self.minDepth(root.right)+1
-        
-        return self.minab(leftDepth,rightDepth)
-        
-    def minab(self, a, b):
-        if a > b:
-            return b
-        else:
-            return a
+
+        return min(self.minDepth(root.left), self.minDepth(root.right))+1
