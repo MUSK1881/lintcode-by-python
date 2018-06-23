@@ -29,6 +29,7 @@ class Solution:
             return head
         
         # pre 和 cur 两个指针
+        # cur.next 变化后，tmp 用来 cur 移动用的
         cur = head
         pre = None
         tmp = None
